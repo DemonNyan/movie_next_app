@@ -1,6 +1,6 @@
 import Movies from "../../../components/Movies";
 const token = process.env.NEXT_PUBLIC_TMDB_API_KEY;
-async function fetchMovies(id) {
+async function fetchMovies(id: string | number) {
   //   console.log(id);
   const res = await fetch(
     `https://api.themoviedb.org/3/discover/movie?with_genres=${id}`,
